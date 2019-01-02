@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:NoteIdea">
+
+    <!-- Purple colors -->
+    <Color x:Key="DarkPurpleMenu">#221452</Color>
+    <SolidColorBrush x:Key="DarkPurpleMenuBrush" Color="{StaticResource DarkPurpleMenu}"/>
+
+    <Color x:Key="SelectedNote">#44327e</Color>
+    <SolidColorBrush x:Key="SelectedNoteBrush" Color="{StaticResource SelectedNote}"/>
+
+    <Color x:Key="NotSelectedNote">#261757</Color>
+    <SolidColorBrush x:Key="NotSelectedNoteBrush" Color="{StaticResource NotSelectedNote}"/>
+
+    <!-- Status colors -->
+    <Color x:Key="StatusGreen">#00b348</Color>
+    <SolidColorBrush x:Key="StatusGreenBrush" Color="{StaticResource StatusGreen}"/>
+
+    <Color x:Key="StatusOrange">#c98e00</Color>
+    <SolidColorBrush x:Key="StatusOrangeBrush" Color="{StaticResource StatusOrange}"/>
+
+    <Color x:Key="StatusRed">#ac1225</Color>
+    <SolidColorBrush x:Key="StatusRedBrush" Color="{StaticResource StatusRed}"/>
+
+    <!-- Basic grey background -->
+    <Color x:Key="LightGreyBackground">#ebebeb</Color>
+    <SolidColorBrush x:Key="LightGreyBackgroundBrush" Color="{StaticResource LightGreyBackground}"/>
+
+    <!-- Text color -->
+    <Color x:Key="LightPurpleTitleName">#44327e</Color>
+    <SolidColorBrush x:Key="LightPurpleTitleNameBrush" Color="{StaticResource LightPurpleTitleName}"/>
+
+    <Color x:Key="BasicDarkTextColor">#1e1e1e</Color>
+    <SolidColorBrush x:Key="BasicDarkTextColorBrush" Color="{StaticResource BasicDarkTextColor}"/>
+
+    <Color x:Key="BasicWhiteTextColor">#fefefe</Color>
+    <SolidColorBrush x:Key="BasicWhiteTextColorBrush" Color="{StaticResource BasicWhiteTextColor}"/>
+
+</ResourceDictionary>

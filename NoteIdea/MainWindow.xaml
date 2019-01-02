@@ -1,0 +1,167 @@
+﻿<Window x:Class="NoteIdea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NoteIdea"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        x:Name="AppWindow"
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
+        ResizeMode="CanMinimize"
+        Title="NoteIdea" Height="600" Width="900">
+        
+            
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!-- Outer border with the dropshadow margin -->
+                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+
+                            <!-- Main window outline -->
+                            <Grid>
+
+                                <!-- Opacity mask for corners on grid -->
+                                <Border x:Name="Container"
+                                        Background="{StaticResource DarkPurpleMenuBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+
+                                <!-- Window border and dropshadown -->
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2" />
+                                    </Border.Effect>
+                                </Border>
+
+                                <!-- The main window content -->
+                                <Grid>
+
+                                    <!-- Corner clipping -->
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}" />
+                                    </Grid.OpacityMask>
+
+                                    <Grid.RowDefinitions>
+
+                                        <!-- Title Bar -->
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=32}" />
+                                        <!-- Drop shadow -->
+                                        <RowDefinition Height="Auto" />
+                                        <!-- Window Content -->
+                                        <RowDefinition Height="*" />
+
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Title Bar -->
+                                    <Grid Grid.Column="0" Panel.ZIndex="1">
+
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Icon -->
+                                            <ColumnDefinition Width="Auto" />
+                                            <!-- Title -->
+                                            <ColumnDefinition Width="*" />
+                                            <!-- Windows Button -->
+                                            <ColumnDefinition Width="Auto" />
+
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <StackPanel Grid.Column="0" Width="50"></StackPanel>
+
+                                        <!-- Title -->
+                                        <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="10 0 0 0"  HorizontalAlignment="Center">
+                                            <TextBlock  Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='NoteIdea'}" />
+                                            <Image Source="Images/Logo/logo.png" Width="20" Margin="10 0 0 0"/>
+                                        </StackPanel>
+
+                                        <!-- Window Buttons -->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_" />
+                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}" Content="X" />
+                                        </StackPanel>
+
+                                    </Grid>
+                                    <!-- Page Content -->
+                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}">
+                                        <ContentPresenter Content="{TemplateBinding Content}" />
+                                    </Border>
+
+                                </Grid>
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0"
+              
+            
+            />
+    </WindowChrome.WindowChrome>
+
+    <Grid Background="{StaticResource LightGreyBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="{DynamicResource DarkPurpleMenuBrush }">
+
+            <StackPanel Margin="0 0 0 0" >
+                <Button  Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}" >
+                    <StackPanel HorizontalAlignment="Center" >
+                        <Image Width="40"  Source="Images/ButtonIcons/all.png"/>
+                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="All notes"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Image Width="40" Source="Images/ButtonIcons/new.png"/>
+                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Add new"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Image Width="40" Source="Images/ButtonIcons/archived.png"/>
+                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Archived notes"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Opacity="0.3" Padding="10 0" Height="90" BorderThickness="0" Background="{x:Null}">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Image Width="40" Source="Images/ButtonIcons/deleted.png"/>
+                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Deleted notes"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" >
+            <StackPanel.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#221452" Offset="1"/>
+                    <GradientStop Color="#44327e" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+        </StackPanel>
+        <StackPanel  Grid.Column="2">
+
+            <RichTextBox Padding="20" Margin="50 30" Height="500" BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
+
+</Window>
