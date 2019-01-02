@@ -68,8 +68,9 @@
     <Style TargetType="{x:Type Button}" x:Key="MainMenuButton">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Height" Value="90" />
+        <Setter Property="Height" Value="95" />
         <Setter Property="Opacity" Value="0.4"/>
+        
 
         <Setter Property="Template">
             <Setter.Value>
@@ -87,11 +88,12 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{StaticResource LightPurpleTitleNameBrush}" />
             </Trigger>
+          
             <EventTrigger RoutedEvent="MouseEnter">
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" To="1" />
                             <ColorAnimation  To="#44327e" 
                                     Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
                                     Duration="0:0:0.3"/>
@@ -103,7 +105,7 @@
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.800" Storyboard.TargetProperty="Opacity" To="0.4" />
+                            <DoubleAnimation Duration="0:0:0.500" Storyboard.TargetProperty="Opacity" To="0.4" />
                             <ColorAnimation From="#44327e" 
                                     Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
                                     Duration="0:0:0.500"/>

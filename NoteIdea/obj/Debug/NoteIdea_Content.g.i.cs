@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/buttonicons/texteditoricons/font+.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo.ico")]
 
 

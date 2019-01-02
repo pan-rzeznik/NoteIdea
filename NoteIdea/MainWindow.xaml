@@ -12,9 +12,9 @@
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
         BorderThickness="0"
-        Title="NoteIdea" Height="600" Width="900">
-        
-            
+        Title="NoteIdea" Height="600" Width="1000">
+
+
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
@@ -158,71 +158,92 @@
             </StackPanel.Background>
 
             <TextBox Text="Search a note..." Style="{DynamicResource SearchBar}">
-                
+
             </TextBox>
 
             <Label Content="All your notes:" Foreground="{DynamicResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
 
-            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
-
+            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+                <TextBlock Text="Tytuł notatki" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
+                <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
+                <Ellipse Fill="{DynamicResource StatusRedBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0"></Ellipse>
             </StackPanel>
-            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
-
+            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+                <TextBlock Text="Tytuł notatki" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
+                <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
+                <Ellipse Fill="{DynamicResource StatusOrangeBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
             </StackPanel>
-            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
-
+            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+                <TextBlock Text="Ten tytuł to jest mega długi ale może sie zmieści " FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
+                <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
+                <Ellipse Fill="{DynamicResource StatusGreenBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
             </StackPanel>
-            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
-
+            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+                <TextBlock Text="Tytuł notatki dłuższy niż poprzedni ale ok" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
+                <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
+                <Ellipse Fill="{DynamicResource StatusGreenBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
             </StackPanel>
-            
+
 
 
         </StackPanel>
-        <StackPanel  Grid.Column="2">
-            <RichTextBox Name="rTextBox" Padding="20" Margin="50 30 50 20" Height="400" BorderThickness="0"/>
-            <StackPanel HorizontalAlignment="Center" Margin="50 0" Orientation="Horizontal" Height="40" Background="White" >
-                <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/undo.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Redo" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/redo.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBold" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/bold.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleItalic" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/italic.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleUnderline" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/underline.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.DecreaseFontSize" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/font.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.IncreaseFontSize" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/font+.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBullets" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/list.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleNumbering" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/list-1.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignLeft" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/left-alignment.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignCenter" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/center-alignment.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignRight" CommandTarget="{Binding ElementName=rTextBox}" >
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/right-alignment.png"/>
-                </Button>
-                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignJustify" CommandTarget="{Binding ElementName=rTextBox}">
-                    <Image Source="Images/ButtonIcons/TextEditorIcons/justify-align.png" />
-                </Button>
-               
+        <StackPanel Grid.Column="2">
+            <StackPanel>
+                <StackPanel.Effect>
+                    <DropShadowEffect Color="#FF959595" Direction="360" ShadowDepth="1" RenderingBias="Quality" BlurRadius="10" Opacity="0.3"/>
+                </StackPanel.Effect>
+                <TextBlock Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
+                <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="Tytuł notatki która jest edytowana" >
+                    
+                </TextBox>
+                <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}"  />
+                <StackPanel Margin="50 0 50 0" Orientation="Horizontal" Height="40" Background="White" HorizontalAlignment="Stretch">
+                    
+                    <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" Padding="10 0 0 0" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/undo.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Redo" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/redo.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBold" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/bold.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleItalic" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/italic.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleUnderline" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/underline.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.DecreaseFontSize" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/font.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.IncreaseFontSize" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/font+.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBullets" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/list.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleNumbering" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/list-1.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignLeft" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/left-alignment.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignCenter" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/center-alignment.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignRight" CommandTarget="{Binding ElementName=rTextBox}" >
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/right-alignment.png"/>
+                    </Button>
+                    <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignJustify" CommandTarget="{Binding ElementName=rTextBox}">
+                        <Image Source="Images/ButtonIcons/TextEditorIcons/justify-align.png" />
+                    </Button>
+
+                </StackPanel>
             </StackPanel>
+
+
+
         </StackPanel>
     </Grid>
 
