@@ -11,7 +11,7 @@
         x:Name="AppWindow"
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
-    
+        BorderThickness="0"
         Title="NoteIdea" Height="600" Width="900">
         
             
@@ -123,39 +123,60 @@
         <StackPanel Grid.Column="0" Background="{DynamicResource DarkPurpleMenuBrush }">
 
             <StackPanel Margin="0 0 0 0" >
-                <Button  Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}" >
+                <Button Style="{DynamicResource MainMenuButton}" >
                     <StackPanel HorizontalAlignment="Center" >
                         <Image Width="40"  Source="Images/ButtonIcons/all.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="All notes"></TextBlock>
+                        <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="All notes"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}">
+                <Button Style="{DynamicResource MainMenuButton}">
                     <StackPanel HorizontalAlignment="Center">
                         <Image Width="40" Source="Images/ButtonIcons/new.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Add new"></TextBlock>
+                        <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="Add new"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}">
+                <Button Style="{DynamicResource MainMenuButton}">
                     <StackPanel HorizontalAlignment="Center">
                         <Image Width="40" Source="Images/ButtonIcons/archived.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Archived notes"></TextBlock>
+                        <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="Archived notes"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Opacity="0.3"  Height="90" BorderThickness="0" Background="{x:Null}">
+                <Button Style="{DynamicResource MainMenuButton}">
                     <StackPanel HorizontalAlignment="Center">
                         <Image Width="40" Source="Images/ButtonIcons/deleted.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Deleted notes"></TextBlock>
+                        <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="Deleted notes"></TextBlock>
                     </StackPanel>
                 </Button>
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" >
+        <StackPanel Grid.Column="1">
             <StackPanel.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="#221452" Offset="1"/>
+                    <GradientStop Color="#FF2C1B68" Offset="1"/>
                     <GradientStop Color="#44327e" Offset="0"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
+
+            <TextBox Text="Search a note..." Style="{DynamicResource SearchBar}">
+                
+            </TextBox>
+
+            <Label Content="All your notes:" Foreground="{DynamicResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
+
+            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
+
+            </StackPanel>
+            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
+
+            </StackPanel>
+            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
+
+            </StackPanel>
+            <StackPanel Margin="20 10 20 10 " Height="70" Background="{DynamicResource NotSelectedNoteBrush}">
+
+            </StackPanel>
+            
+
 
         </StackPanel>
         <StackPanel  Grid.Column="2">

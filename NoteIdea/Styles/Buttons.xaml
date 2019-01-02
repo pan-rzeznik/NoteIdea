@@ -65,27 +65,11 @@
 
     <!-- Main menu button -->
 
-    <!-- DELETED --> 
-    
-
-    <!-- Window Close Button -->
-        <Style TargetType="{x:Type Button}" x:Key="WindowCloseButton" BasedOn="{StaticResource WindowControlButton}">
-
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Red" />
-                    <Setter Property="Foreground" Value="{StaticResource DarkPurpleMenuBrush}" />
-                </Trigger>
-            </Style.Triggers>
-
-        </Style>
-
-    <!-- Text Editor Button -->
-    <Style TargetType="{x:Type Button}" x:Key="TextEditorButton">
+    <Style TargetType="{x:Type Button}" x:Key="MainMenuButton">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Margin" Value="5"/>
-        <Setter Property="Height" Value="20"/>
+        <Setter Property="Height" Value="90" />
+        <Setter Property="Opacity" Value="0.4"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -96,6 +80,80 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        
+        
+        
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource LightPurpleTitleNameBrush}" />
+            </Trigger>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="Opacity" To="1" />
+                            <ColorAnimation  To="#44327e" 
+                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                                    Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.800" Storyboard.TargetProperty="Opacity" To="0.4" />
+                            <ColorAnimation From="#44327e" 
+                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                                    Duration="0:0:0.500"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+                
+            </EventTrigger>
+            
+        </Style.Triggers>
+        
+        
     </Style>
 
+
+    <!-- Window Close Button -->
+        <Style TargetType="{x:Type Button}" x:Key="WindowCloseButton" BasedOn="{StaticResource WindowControlButton}">
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Red" />
+                <Setter Property="Foreground" Value="{StaticResource DarkPurpleMenuBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Text Editor Button -->
+    <Style TargetType="{x:Type Button}" x:Key="TextEditorButton">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Opacity" Value="0.4"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="1" />
+
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    
 </ResourceDictionary>

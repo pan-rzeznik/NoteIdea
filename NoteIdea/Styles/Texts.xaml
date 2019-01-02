@@ -10,4 +10,50 @@
         <Setter Property="FontSize" Value="22"/>
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}" x:Key="MainMenuSubtitle" BasedOn="{StaticResource TitleName}">
+        <Setter Property="Foreground" Value="{StaticResource BasicWhiteTextColorBrush}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0 7 0 0" />
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}" x:Key="SearchBar">
+        <Setter Property="Foreground" Value="{StaticResource BasicWhiteTextColorBrush}" />
+        <Setter Property="Background" Value="{StaticResource DarkPurpleMenuBrush}" />
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="Padding" Value="6"/>
+        <Setter Property="Margin" Value="20 20 20 10" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BasicWhiteTextColorBrush}"/>
+
+
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="GotFocus">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="Opacity" To="0.85" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="LostFocus">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.600" Storyboard.TargetProperty="Opacity" To="0.4" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+        
+
+    </Style>
+
 </ResourceDictionary>
