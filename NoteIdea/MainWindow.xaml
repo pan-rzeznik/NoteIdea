@@ -35,7 +35,7 @@
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
 
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2" />
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.8" />
                                     </Border.Effect>
                                 </Border>
 
@@ -157,45 +157,65 @@
                     <GradientStop Color="#44327e" Offset="0"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            
-            <!-- Searchbar -->
-            <TextBox Text="Search a note..." Style="{DynamicResource SearchBar}"></TextBox>
+            <StackPanel.Effect>
+                <DropShadowEffect Color="#FF959595" Direction="0" ShadowDepth="3" RenderingBias="Quality" BlurRadius="9" Opacity="0.5"/>
+            </StackPanel.Effect>
 
+            <!-- Searchbar -->
+            
+            <TextBox Text="Search a note..." Style="{DynamicResource SearchBar}"></TextBox>
+            
+            
             <Label Content="All your notes:" Foreground="{DynamicResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
 
             <!-- Short notes -->
-            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+            <Border Style="{DynamicResource ShortNotes}">
+            <StackPanel>
                 <TextBlock Text="Tytuł notatki" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
                 <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
                 <Ellipse Fill="{DynamicResource StatusRedBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0"></Ellipse>
             </StackPanel>
-            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
-                <TextBlock Text="Tytuł notatki" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
-                <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
-                <Ellipse Fill="{DynamicResource StatusOrangeBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
-            </StackPanel>
-            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+            </Border>
+
+
+
+            <Border Style="{DynamicResource ShortNotes}">
+                <StackPanel>
+                    <TextBlock  Text="Tytuł notatki" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
+                    <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
+                    <Ellipse Fill="{DynamicResource StatusOrangeBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource ShortNotes}">
+                <StackPanel>
                 <TextBlock Text="Ten tytuł to jest mega długi ale może sie zmieści " FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
                 <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
                 <Ellipse Fill="{DynamicResource StatusGreenBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
             </StackPanel>
-            <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
+            </Border>
+            <Border Style="{DynamicResource ShortNotes}">
+                <StackPanel>
                 <TextBlock Text="Tytuł notatki dłuższy niż poprzedni ale ok" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
                 <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
                 <Ellipse Fill="{DynamicResource StatusGreenBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
             </StackPanel>
+            </Border>
         </StackPanel>
 
         <!-- Text editor -->
         <StackPanel Grid.Column="2">
+            
             <StackPanel>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="#FF959595" Direction="360" ShadowDepth="1" RenderingBias="Quality" BlurRadius="10" Opacity="0.3"/>
                 </StackPanel.Effect>
-
+                
                 <!-- Date -->
+                <Border Style="{DynamicResource DateBorder}">
                 <TextBlock Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
-
+                </Border>
+                
                 <!-- Title -->
                 <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="Tytuł notatki która jest edytowana" />
 
@@ -203,7 +223,8 @@
                 <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}"  />
 
                 <!-- Text editor toolbar -->
-                <StackPanel Margin="50 0 50 0" Orientation="Horizontal" Height="40" Background="White" HorizontalAlignment="Stretch">
+                <Border Margin="50 0 50 0" Height="40"   Background="White" CornerRadius="0 0 10 10">
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Stretch">
                     
                     <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" Padding="10 0 0 0" CommandTarget="{Binding ElementName=rTextBox}" >
                         <Image Source="Images/ButtonIcons/TextEditorIcons/undo.png"/>
@@ -244,10 +265,10 @@
                     <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignJustify" CommandTarget="{Binding ElementName=rTextBox}">
                         <Image Source="Images/ButtonIcons/TextEditorIcons/justify-align.png" />
                     </Button>
-
                 </StackPanel>
+                </Border>
             </StackPanel>
-
+            
         </StackPanel>
     </Grid>
 

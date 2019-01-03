@@ -5,12 +5,18 @@
     <!-- Date style -->
     <Style TargetType="{x:Type TextBlock}" x:Key="Date">
         <Setter Property="Foreground" Value="{StaticResource BasicDarkTextColorBrush}" />
-        <Setter Property="Background" Value="White" />
-        <Setter Property="Margin" Value="50 20 50 0" />
+        <Setter Property="Margin" Value="50 20 20 0" />
         <Setter Property="TextAlignment" Value="Right" />
-        <Setter Property="Padding" Value="0 20 20 10" />
         <Setter Property="FontFamily" Value="{DynamicResource LatoMedium}"/>
         <Setter Property="FontSize" Value="12"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="DateBorder">
+        
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Margin" Value="50 20 50 0" />
+        <Setter Property="CornerRadius" Value="10 10 0 0" />
+
     </Style>
 
     <!-- Note title style -->

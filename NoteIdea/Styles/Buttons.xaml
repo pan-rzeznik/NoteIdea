@@ -66,7 +66,7 @@
     <!-- Main menu button -->
 
     <Style TargetType="{x:Type Button}" x:Key="MainMenuButton">
-        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Background" Value="#221452" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Height" Value="95" />
         <Setter Property="Opacity" Value="0.4"/>
@@ -78,37 +78,44 @@
                     <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Border>
+                    <ControlTemplate.Triggers>
+                       
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
 
         <!-- Main menu button ANIMATION -->
+
         <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource LightPurpleTitleNameBrush}" />
-            </Trigger>
-          
             <EventTrigger RoutedEvent="MouseEnter">
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" To="1" />
-                            <ColorAnimation  To="#44327e" 
-                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
-                                    Duration="0:0:0.3"/>
+                            <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Opacity" To="0.4" />
+                            <ColorAnimation To="{StaticResource SelectedNote}" Duration="0:0:0.25"  Storyboard.TargetProperty="Background.Color" />
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger.Actions>
             </EventTrigger>
-            
+
+            <EventTrigger RoutedEvent="Click">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" To="1" />
+                            <ColorAnimation To="{StaticResource SelectedNote}" Duration="0:0:0.3"  Storyboard.TargetProperty="Background.Color" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+
             <EventTrigger RoutedEvent="MouseLeave">
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.500" Storyboard.TargetProperty="Opacity" To="0.4" />
-                            <ColorAnimation From="#44327e" 
-                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
-                                    Duration="0:0:0.500"/>
+                            <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Opacity" To="0.4" />
+                            <ColorAnimation To="{StaticResource DarkPurpleMenu}" Duration="0:0:0.25" Storyboard.TargetProperty="Background.Color" />
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger.Actions>
@@ -158,5 +165,17 @@
         </Style.Triggers>
     </Style>
     
-    
+    <!-- temporary short notes -->
+
+
+    <Style TargetType="{x:Type Border}" x:Key="ShortNotes">
+        <Setter Property="Background" Value="{DynamicResource DarkPurpleMenuBrush}" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Height" Value="85" />
+        <Setter Property="Margin" Value="20 10" />
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource SelectedNoteBrush}"/>
+        
+    </Style>
+
 </ResourceDictionary>
