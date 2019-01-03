@@ -14,7 +14,7 @@
         BorderThickness="0"
         Title="NoteIdea" Height="600" Width="1000">
 
-
+    <!-- Custom window design -->
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
@@ -101,18 +101,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-
     <WindowChrome.WindowChrome>
         <WindowChrome
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
             CaptionHeight="{Binding TitleHeight}"
             CornerRadius="0"
             GlassFrameThickness="0"
-              
-            
             />
     </WindowChrome.WindowChrome>
 
+    <!-- Main grid properties -->
     <Grid Background="{StaticResource LightGreyBackgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -120,6 +118,7 @@
             <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- Main menu -->
         <StackPanel Grid.Column="0" Background="{DynamicResource DarkPurpleMenuBrush }">
 
             <StackPanel Margin="0 0 0 0" >
@@ -149,6 +148,8 @@
                 </Button>
             </StackPanel>
         </StackPanel>
+
+        <!-- Short notes column -->
         <StackPanel Grid.Column="1">
             <StackPanel.Background>
                 <LinearGradientBrush>
@@ -156,13 +157,13 @@
                     <GradientStop Color="#44327e" Offset="0"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-
-            <TextBox Text="Search a note..." Style="{DynamicResource SearchBar}">
-
-            </TextBox>
+            
+            <!-- Searchbar -->
+            <TextBox Text="Search a note..." Style="{DynamicResource SearchBar}"></TextBox>
 
             <Label Content="All your notes:" Foreground="{DynamicResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
 
+            <!-- Short notes -->
             <StackPanel Margin="20 10 20 10 " Height="85" Background="{DynamicResource NotSelectedNoteBrush}">
                 <TextBlock Text="Tytuł notatki" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
                 <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
@@ -183,20 +184,25 @@
                 <TextBlock MaxHeight="42" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" Padding="10 5 5 5" TextAlignment="Left" Text="The semi-​​rounded details of the  strong struc­ture  strong struc­ture let­ters give Lato a feel­ing of struc­ture let­ters give Lato a feel­ing warmth, while the strong struc­ture pro­vides sta­bil­ity and seri­ous­ness. " />
                 <Ellipse Fill="{DynamicResource StatusGreenBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,0" Panel.ZIndex="3"></Ellipse>
             </StackPanel>
-
-
-
         </StackPanel>
+
+        <!-- Text editor -->
         <StackPanel Grid.Column="2">
             <StackPanel>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="#FF959595" Direction="360" ShadowDepth="1" RenderingBias="Quality" BlurRadius="10" Opacity="0.3"/>
                 </StackPanel.Effect>
+
+                <!-- Date -->
                 <TextBlock Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
-                <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="Tytuł notatki która jest edytowana" >
-                    
-                </TextBox>
+
+                <!-- Title -->
+                <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="Tytuł notatki która jest edytowana" />
+
+                <!-- Text box for note content -->
                 <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}"  />
+
+                <!-- Text editor toolbar -->
                 <StackPanel Margin="50 0 50 0" Orientation="Horizontal" Height="40" Background="White" HorizontalAlignment="Stretch">
                     
                     <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" Padding="10 0 0 0" CommandTarget="{Binding ElementName=rTextBox}" >
@@ -241,8 +247,6 @@
 
                 </StackPanel>
             </StackPanel>
-
-
 
         </StackPanel>
     </Grid>

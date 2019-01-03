@@ -18,8 +18,6 @@ namespace NoteIdea
         /// </summary>
         private Window mWindow;
 
-        public DateTime today = new DateTime();
-
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>

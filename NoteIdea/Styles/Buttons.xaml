@@ -81,9 +81,8 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        
-        
-        
+
+        <!-- Main menu button ANIMATION -->
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{StaticResource LightPurpleTitleNameBrush}" />
@@ -101,6 +100,7 @@
                     </BeginStoryboard>
                 </EventTrigger.Actions>
             </EventTrigger>
+            
             <EventTrigger RoutedEvent="MouseLeave">
                 <EventTrigger.Actions>
                     <BeginStoryboard>
@@ -149,10 +149,11 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        
+        <!-- Text Editor Button ANIMATIONS -->
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Opacity" Value="1" />
-
             </Trigger>
         </Style.Triggers>
     </Style>
