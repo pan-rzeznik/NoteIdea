@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Styles/Texts.xaml" />
                 <ResourceDictionary Source="Styles/RichTextBox.xaml" />
                 <ResourceDictionary Source="Styles/Windows.xaml" />
+                <ResourceDictionary Source="Styles/Scrollbar.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

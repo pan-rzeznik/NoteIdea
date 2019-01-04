@@ -58,3 +58,4 @@ C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.Properties.Resources
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.GenerateResource.cache
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CoreCompileInputs.cache
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CopyComplete
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Scrollbar.baml

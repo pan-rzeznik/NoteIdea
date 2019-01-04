@@ -9,10 +9,12 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         x:Name="AppWindow"
+        ResizeMode="CanMinimize"
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
         BorderThickness="0"
         Title="NoteIdea" Height="600" Width="1000">
+ 
 
     <!-- Custom window design -->
     <Window.Resources>
@@ -150,16 +152,14 @@
 
                 <!-- Short notes -->
                 <StackPanel  Grid.Row="2">
-                    <local:ShortNoteListItemControl/>
-                    <local:ShortNoteListItemControl/>
-                    <local:ShortNoteListItemControl/>
+                    <local:ShortNotesListConrol/>
                 </StackPanel>
 
             </Grid>
         </StackPanel>
 
         <!-- Text editor -->
-        <StackPanel Grid.Column="2">
+        <StackPanel Grid.Column="2" Grid.Row="2">
 
             <local:TextEditorControl/>
 

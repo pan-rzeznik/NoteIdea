@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\App.xaml
-121210144184
+13328737724
 
-18-154719644
+23-1509017316
 15-752277578
-Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
+Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Scrollbar.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
 
-True
+False
 
