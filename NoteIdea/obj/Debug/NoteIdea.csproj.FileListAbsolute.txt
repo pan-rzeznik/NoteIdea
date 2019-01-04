@@ -23,17 +23,19 @@ C:\Users\Nauka\source\repos\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CopyComp
 C:\Users\Nauka\source\repos\NoteIdea\NoteIdea\obj\Debug\NoteIdea.exe
 C:\Users\Nauka\source\repos\NoteIdea\NoteIdea\obj\Debug\NoteIdea.pdb
 C:\Users\Nauka\source\repos\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csprojAssemblyReference.cache
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.exe.config
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.exe
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.pdb
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\Microsoft.Windows.Shell.dll
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\MainMenuControl.g.cs
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\SerachBarControl.g.cs
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListItemControl.g.cs
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListControl.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\MainWindow.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\App.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea_MarkupCompile.cache
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea_MarkupCompile.lref
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\App.baml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\MainMenuControl.baml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\SerachBarControl.baml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListItemControl.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\MainWindow.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Buttons.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Colors.baml
@@ -41,10 +43,18 @@ C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Fonts.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\RichTextBox.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Texts.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Windows.baml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.exe
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.pdb
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorControl.g.cs
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.exe.config
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.exe
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.pdb
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListControl.baml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorControl.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.g.resources
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.Properties.Resources.resources
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.GenerateResource.cache
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CoreCompileInputs.cache
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CopyComplete
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.exe
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.pdb

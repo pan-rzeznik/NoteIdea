@@ -67,10 +67,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\MainMenuControl.xaml.cs">
+      <DependentUpon>MainMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SerachBarControl.xaml.cs">
+      <DependentUpon>SerachBarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShortNotes\ShortNoteListItemControl.xaml.cs">
+      <DependentUpon>ShortNoteListItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShortNotes\ShortNoteListControl.xaml.cs">
+      <DependentUpon>ShortNoteListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Text Editor\TextEditorControl.xaml.cs">
+      <DependentUpon>TextEditorControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
+    <Page Include="Controls\MainMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SerachBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ShortNotes\ShortNoteListItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ShortNotes\ShortNoteListControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Text Editor\TextEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
