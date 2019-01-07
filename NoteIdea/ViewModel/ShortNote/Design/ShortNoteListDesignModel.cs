@@ -3,13 +3,20 @@ using System.Collections.Generic;
 
 namespace NoteIdea
 {
+    
     public class ShortNoteListDesignModel : ShortNoteListViewModel
     {
+        /// <summary>
+        /// Single instance of class. It's usig for designing procces. 
+        /// </summary>
         public static ShortNoteListDesignModel Instance => new ShortNoteListDesignModel();
 
+        /// <summary>
+        /// List of AllNotes
+        /// </summary>
         public ShortNoteListDesignModel()
         { 
-            Notes = new List<ShortNoteListItemViewModel>
+            AllNotes = new List<ShortNoteListItemViewModel>
                 {
                     new ShortNoteListItemViewModel
                     {

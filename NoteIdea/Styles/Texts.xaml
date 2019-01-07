@@ -20,17 +20,17 @@
         <Setter Property="TextAlignment" Value="Center"/>
     </Style>
 
-    <!-- Search bar style -->
-    <Style TargetType="{x:Type TextBox}" x:Key="SearchBar">
-        <Setter Property="Foreground" Value="{StaticResource BasicWhiteTextColorBrush}" />
+    <!-- Search bar border style -->
+    <Style TargetType="{x:Type Border}" x:Key="SearchBarBorder">
+        
         <Setter Property="Background" Value="{StaticResource DarkPurpleMenuBrush}" />
         <Setter Property="Opacity" Value="0.5" />
         <Setter Property="Padding" Value="6"/>
         <Setter Property="Margin" Value="20 20 20 10" />
         <Setter Property="Height" Value="30" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="TextAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="12"/>
+     
+        
         <Setter Property="BorderBrush" Value="{DynamicResource BasicWhiteTextColorBrush}"/>
 
         <!-- Search bar ANIMATION -->
@@ -59,7 +59,16 @@
 
     </Style>
 
-    
-    
+    <Style TargetType="{x:Type TextBox}" x:Key="SearchBarText">
+        <Setter Property="Background" Value="{StaticResource DarkPurpleMenuBrush}" />
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="Foreground" Value="{DynamicResource BasicWhiteTextColorBrush}"/>
+        <Setter Property="Height" Value="30" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BasicWhiteTextColorBrush}"/>
+
+    </Style>
+
+
 
 </ResourceDictionary>

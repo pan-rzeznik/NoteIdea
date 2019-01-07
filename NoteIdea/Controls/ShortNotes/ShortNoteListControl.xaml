@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NoteIdea"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="300">
-    <Grid Height="450" DataContext="{x:Static local:ShortNoteListDesignModel.Instance}">
+             d:DesignHeight="420" d:DesignWidth="300">
+    <Grid Height="440" DataContext="{x:Static local:ShortNoteListDesignModel.Instance}">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding Notes}">
+            <ItemsControl ItemsSource="{Binding AllNotes}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <local:ShortNoteListItemControl/>

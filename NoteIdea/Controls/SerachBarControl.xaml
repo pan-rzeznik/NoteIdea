@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:NoteIdea"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="300">
-    <Grid>
-        <TextBox Grid.Row="0" Text="Search a note..." Style="{DynamicResource SearchBar}"></TextBox>
-    </Grid>
+    <Border Style="{DynamicResource SearchBarBorder}" CornerRadius="5">
+        <TextBox Style="{DynamicResource SearchBarText}" Background="Transparent" Grid.Row="0" Text="Search a note..." ></TextBox>
+    </Border>
 </UserControl>

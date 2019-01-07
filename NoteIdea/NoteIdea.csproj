@@ -79,6 +79,12 @@
     <Compile Include="Controls\ShortNotes\ShortNoteListControl.xaml.cs">
       <DependentUpon>ShortNoteListControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\EmptyListControl.xaml.cs">
+      <DependentUpon>EmptyListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Text Editor\TextEditorDisableControl.xaml.cs">
+      <DependentUpon>TextEditorDisableControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Text Editor\TextEditorControl.xaml.cs">
       <DependentUpon>TextEditorControl.xaml</DependentUpon>
     </Compile>
@@ -86,11 +92,9 @@
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\ShortNote\Design\ShortNoteListDesignModel.cs" />
     <Compile Include="ViewModel\ShortNote\Design\ShortNoteListItemDesignModel.cs" />
-    <Compile Include="ViewModel\ShortNote\NoteStatus.cs" />
     <Compile Include="ViewModel\ShortNote\ShortNoteListItemViewModel.cs" />
     <Compile Include="ViewModel\ShortNote\ShortNoteListViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
-    <Compile Include="Window\WindowResizer.cs" />
     <Page Include="Controls\MainMenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +108,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\ShortNotes\ShortNoteListControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\EmptyListControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Text Editor\TextEditorDisableControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -236,7 +248,9 @@
   <ItemGroup>
     <Resource Include="logo.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\bgeditor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

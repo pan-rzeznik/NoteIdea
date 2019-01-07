@@ -10,7 +10,7 @@ namespace NoteIdea
     {
         public ShortNotesListConrol()
         {
-            InitializeComponent();
+           InitializeComponent();
         }
     }
 }

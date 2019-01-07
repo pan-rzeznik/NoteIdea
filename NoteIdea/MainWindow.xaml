@@ -14,7 +14,7 @@
         MinHeight="{Binding WindowMinimumHeight}"
         BorderThickness="0"
         Title="NoteIdea" Height="600" Width="1000">
- 
+
 
     <!-- Custom window design -->
     <Window.Resources>
@@ -23,7 +23,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
                         <!-- Outer border with the dropshadow margin -->
-                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+                        <Border Padding="{Binding OuterMarginSizeThickness}">
 
                             <!-- Main window outline -->
                             <Grid>
@@ -31,13 +31,13 @@
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
                                         Background="{StaticResource DarkPurpleMenuBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+                                        CornerRadius="{Binding WindowCornerRadius}" />
 
                                 <!-- Window border and dropshadown -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                                <Border CornerRadius="{Binding WindowCornerRadius}">
 
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.8" />
+                                        <DropShadowEffect ShadowDepth="10" Opacity="0.8" />
                                     </Border.Effect>
                                 </Border>
 
@@ -102,6 +102,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome
@@ -160,8 +161,11 @@
 
         <!-- Text editor -->
         <StackPanel Grid.Column="2" Grid.Row="2">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Images/bgeditor.png" Opacity="0.2"/>
+            </StackPanel.Background>
 
-            <local:TextEditorControl/>
+            <local:TextEditorControl />
 
         </StackPanel>
     </Grid>

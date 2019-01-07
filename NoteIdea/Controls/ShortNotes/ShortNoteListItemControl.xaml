@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:NoteIdea"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="350">
+    
     <Border Style="{DynamicResource ShortNotes}" d:DataContext="{x:Static local:ShortNoteListItemDesignModel.Instance}">
         <StackPanel>
             <TextBlock TextTrimming="WordEllipsis" Text="{Binding Title}" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>

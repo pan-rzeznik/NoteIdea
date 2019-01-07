@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\
 NoteIdea
 none
 false
 DEBUG;TRACE
-C:\Users\norbert\Desktop\NoteIdea\NoteIdea\App.xaml
-13328737724
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\App.xaml
+15-85217185
 
-23-1456192670
-15-928696971
-Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Scrollbar.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
+19-831544169
+15-752277578
+Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\EmptyListControl.xaml;Controls\Text Editor\TextEditorDisableControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Scrollbar.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
 
-True
+False
 

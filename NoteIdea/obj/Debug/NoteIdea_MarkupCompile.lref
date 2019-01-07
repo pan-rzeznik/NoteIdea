@@ -1,16 +1,18 @@
-﻿C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\GeneratedInternalTypeHelper.g.cs
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\App.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Controls\MainMenuControl.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Controls\SerachBarControl.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Controls\ShortNotes\ShortNoteListItemControl.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Controls\ShortNotes\ShortNoteListControl.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Controls\Text Editor\TextEditorControl.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\MainWindow.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\Buttons.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\Colors.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\Fonts.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\RichTextBox.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\Scrollbar.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\Texts.xaml;;
-FC:\Users\norbert\Desktop\NoteIdea\NoteIdea\Styles\Windows.xaml;;
+﻿
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\App.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\MainMenuControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\SerachBarControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\ShortNotes\ShortNoteListItemControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\ShortNotes\ShortNoteListControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\EmptyListControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\Text Editor\TextEditorDisableControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Controls\Text Editor\TextEditorControl.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\MainWindow.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\Buttons.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\Colors.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\Fonts.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\RichTextBox.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\Scrollbar.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\Texts.xaml;;
+FC:\Users\Nauka\Desktop\NoteIdea\NoteIdea\Styles\Windows.xaml;;
 
