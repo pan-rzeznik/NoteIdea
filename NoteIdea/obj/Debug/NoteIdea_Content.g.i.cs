@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/bgeditor.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/buttonicons/texteditoricons/inbox.png")]
 
 

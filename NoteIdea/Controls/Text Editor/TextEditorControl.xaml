@@ -14,7 +14,33 @@
 
             <!-- Date -->
             <Border Style="{DynamicResource DateBorder}">
-                <TextBlock Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Ellipse  Fill="{DynamicResource StatusGreenBrush}" Width="10" Height="10" HorizontalAlignment="Right" Margin="20,10,0,0" Panel.ZIndex="2"></Ellipse>
+
+                    <Button Grid.Column="1" Style="{DynamicResource TextEditorDeletedButton}">
+                        <Image  Source="../../Images/ButtonIcons/TextEditorIcons/delete.png" />
+                    </Button>
+                    <Button Grid.Column="2" Style="{DynamicResource TextEditorDeletedButton}">
+                        <Image  Source="/NoteIdea;component/Images/ButtonIcons/TextEditorIcons/inbox.png" />
+                    </Button>
+                    
+                    <ComboBox  Grid.Column="3" Height="20" BorderThickness="0" Background="Transparent" Text="Status" Margin="20 10 10 0" HorizontalAlignment="Right">
+                        <ComboBoxItem Focusable="True">Importnat</ComboBoxItem>
+                        <ComboBoxItem>Normal</ComboBoxItem>
+                        <ComboBoxItem>Unimportnat</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock Grid.Column="4" Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
+                    
+                </Grid>
+             
             </Border>
 
             <!-- Title -->
@@ -25,7 +51,12 @@
 
             <!-- Text editor toolbar -->
             <Border Margin="50 0 50 0" Height="40"   Background="White" CornerRadius="0 0 10 10">
-                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Stretch">
 
                     <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" Padding="10 0 0 0" CommandTarget="{Binding ElementName=rTextBox}" >
                         <Image Source="../../Images/ButtonIcons/TextEditorIcons/undo.png"/>
@@ -67,6 +98,9 @@
                         <Image Source="../../Images/ButtonIcons/TextEditorIcons/justify-align.png" />
                     </Button>
                 </StackPanel>
+
+                  
+                </Grid>
             </Border>
         </StackPanel>
     </Grid>

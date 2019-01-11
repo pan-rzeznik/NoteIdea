@@ -25,5 +25,12 @@ namespace NoteIdea
         /// Properies to styling a notes
         /// </summary>
         public bool isSelected { get; set; }
+
+        /// <summary>
+        /// Properties to get information where this note comes from. For example:
+        /// User deleted a note from our archived list so this lastStat will be: achieved.
+        /// If a user decides to restore this note, it will back to an archived list
+        /// </summary>
+        public bool lastState { get; set; }
     }
 }

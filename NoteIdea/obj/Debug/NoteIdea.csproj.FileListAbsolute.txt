@@ -38,4 +38,5 @@ C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\EmptyListControl.g.c
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\EmptyListControl.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorDisableControl.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorDisableControl.baml
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csprojAssemblyReference.cache
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.g.cs
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.baml
