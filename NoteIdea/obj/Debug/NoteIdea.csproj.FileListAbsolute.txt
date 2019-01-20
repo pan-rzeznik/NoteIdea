@@ -40,3 +40,4 @@ C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEdit
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorDisableControl.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.baml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csprojAssemblyReference.cache

@@ -165,7 +165,7 @@
                 <ImageBrush ImageSource="Images/bgeditor.png" Opacity="0.2"/>
             </StackPanel.Background>
 
-            <local:TextEditorInDeletedListControl />
+            <local:TextEditorControl />
 
         </StackPanel>
     </Grid>
