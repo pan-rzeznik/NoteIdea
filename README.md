@@ -1,7 +1,10 @@
 # NoteIdea project
+![text-animation-8 9s-1000x100px](https://user-images.githubusercontent.com/43467669/51444797-b1183200-1cfc-11e9-9ea2-40b030d994cc.gif)
 
+### NoteIdea is a desktop application for taking notes created for the needs of a semstran project.
 
-![zxc](https://user-images.githubusercontent.com/43467669/51444455-f38b4000-1cf7-11e9-928b-f5d7ee3cb901.gif)
+The main goal of the project was to develop applications based on WPF and cooperation between team members through GitHub.
 
+NoteIdea application is used to save short notes, give them the status of validity and has a built-in text editor to edit the text of notes entered.
 
-[Documentation](https://norbert-wsei.github.io) - API, Project Description
+### [Documentation](https://norbert-wsei.github.io) - API, Project Description
