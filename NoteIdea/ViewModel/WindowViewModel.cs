@@ -17,7 +17,6 @@ namespace NoteIdea
         /// The window this view model controls
         /// </summary>
         private Window mWindow;
-        
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -29,7 +28,6 @@ namespace NoteIdea
         /// </summary>
         private int mWindowRadius = 10;
 
-       
 
         #endregion
 
@@ -38,27 +36,19 @@ namespace NoteIdea
         /// <summary>
         /// The smallest width the window can go to
         /// </summary>
-        public double WindowMinimumWidth { get; set; } = 400;
+        public double WindowMinimumWidth { get; set; } = 800;
 
         /// <summary>
         /// The smallest height the window can go to
         /// </summary>
-        public double WindowMinimumHeight { get; set; } = 400;
+        public double WindowMinimumHeight { get; set; } = 500;
 
-        /// <summary>
-        /// True if the window should be borderless because it is docked or maximized
-        /// </summary>
-        public bool Borderless {  get { return (mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked); } }
 
         /// <summary>
         /// The size of the resize border around the window
         /// </summary>
         public int ResizeBorder { get; set; } = 6;
 
-        /// <summary>
-        /// The size of the resize border around the window, taking into account the outer margin
-        /// </summary>
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -67,8 +57,7 @@ namespace NoteIdea
         {
             get
             {
-                // If it is maximized or docked, no border
-                return Borderless ? 0 : mOuterMarginSize;
+                return  mOuterMarginSize;
             }
             set
             {
@@ -88,8 +77,7 @@ namespace NoteIdea
         {
             get
             {
-                // If it is maximized or docked, no border
-                return Borderless ? 0 : mWindowRadius;
+                return mWindowRadius;
             }
             set
             {
@@ -106,10 +94,11 @@ namespace NoteIdea
         /// The height of the title bar / caption of the window
         /// </summary>
         public int TitleHeight { get; set; } = 32;
+
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
-        public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
+        public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight); } }
 
         #endregion
 
@@ -139,13 +128,6 @@ namespace NoteIdea
         {
             mWindow = window;
 
-            // Listen out for the window resizing
-            mWindow.StateChanged += (sender, e) =>
-            {
-                // Fire off events for all properties that are affected by a resize
-                WindowResized();
-            };
-
             // Create commands
             MinimizeCommand = new RelayCommand(() => mWindow.WindowState = WindowState.Minimized);
             CloseCommand = new RelayCommand(() => mWindow.Close());
@@ -154,37 +136,8 @@ namespace NoteIdea
 
         #endregion
 
-        #region Private Helpers
+    
 
-        /// <summary>
-        /// Gets the current mouse position on the screen
-        /// </summary>
-        /// <returns></returns>
-        private Point GetMousePosition()
-        {
-            // Position of the mouse relative to the window
-            var position = Mouse.GetPosition(mWindow);
-
-            // Add the window position so its a "ToScreen"
-            return new Point(position.X + mWindow.Left, position.Y + mWindow.Top);
-        }
-
-        /// <summary>
-        /// If the window resizes to a special position (docked or maximized)
-        /// this will update all required property change events to set the borders and radius values
-        /// </summary>
-        private void WindowResized()
-        {
-            // Fire off events for all properties that are affected by a resize
-            OnPropertyChanged(nameof(Borderless));
-            OnPropertyChanged(nameof(ResizeBorderThickness));
-            OnPropertyChanged(nameof(OuterMarginSize));
-            OnPropertyChanged(nameof(OuterMarginSizeThickness));
-            OnPropertyChanged(nameof(WindowRadius));
-            OnPropertyChanged(nameof(WindowCornerRadius));
-        }
-
-
-        #endregion
+        
     }
 }

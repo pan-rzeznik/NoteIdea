@@ -1,0 +1,1 @@
+# This is documentation for [NoteIdea](https://github.com/pan-rzeznik/NoteIdea) project.

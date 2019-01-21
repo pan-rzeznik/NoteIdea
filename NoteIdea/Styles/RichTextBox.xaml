@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:NoteIdea">
+
+    <!-- Date style -->
+    <Style TargetType="{x:Type TextBlock}" x:Key="Date">
+        <Setter Property="Foreground" Value="{StaticResource BasicDarkTextColorBrush}" />
+        <Setter Property="Margin" Value="50 20 20 0" />
+        <Setter Property="TextAlignment" Value="Right" />
+        <Setter Property="FontFamily" Value="{DynamicResource LatoMedium}"/>
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="DateBorder">
+        
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Margin" Value="50 20 50 0" />
+        <Setter Property="CornerRadius" Value="10 10 0 0" />
+
+    </Style>
+
+    <!-- Note title style -->
+    <Style TargetType="{x:Type TextBox}" x:Key="NoteTitle">
+        <Setter Property="Foreground" Value="{StaticResource BasicDarkTextColorBrush}" />
+        <Setter Property="Margin" Value="50 0 50 0" />
+        <Setter Property="Height" Value="70" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="FontFamily" Value="{DynamicResource LatoBold}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextAlignment" Value="Right"/>
+
+    </Style>
+
+    <!-- Note content style -->
+    <Style TargetType="{x:Type RichTextBox}" x:Key="TextEditor">
+        <Setter Property="Foreground" Value="{StaticResource BasicDarkTextColorBrush}" />
+        <Setter Property="Margin" Value="50 0 50 0" />
+        <Setter Property="MinHeight" Value="300" />
+        <Setter Property="Height" Value="350" />
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="AllowDrop" Value="True"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="FontFamily" Value="{DynamicResource LatoMedium}"/>
+    </Style>
+
+</ResourceDictionary>

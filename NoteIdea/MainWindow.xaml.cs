@@ -25,5 +25,6 @@ namespace NoteIdea
             InitializeComponent();
             this.DataContext = new WindowViewModel(this);
         }
+
     }
 }

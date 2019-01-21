@@ -5,11 +5,20 @@
     <FontFamily x:Key="LatoThin">pack://appliction;,,,/Fonts/#Lato Thin</FontFamily>
     <FontFamily x:Key="LatoRegular">pack://appliction;,,,/Fonts/#Lato Regular</FontFamily>
     <FontFamily x:Key="LatoBold">pack://appliction;,,,/Fonts/#Lato Bold</FontFamily>
+    <FontFamily x:Key="LatoLight">pack://appliction;,,,/Fonts/#Lato Light</FontFamily>
+    <FontFamily x:Key="LatoBlack">pack://appliction;,,,/Fonts/#Lato Black</FontFamily>
+    <FontFamily x:Key="LatoHeavy">pack://appliction;,,,/Fonts/#Lato Heavy</FontFamily>
+    <FontFamily x:Key="LatoSemiBold">pack://appliction;,,,/Fonts/#Lato SemiBold</FontFamily>
+    <FontFamily x:Key="LatoMedium">pack://appliction;,,,/Fonts/#Lato Medium</FontFamily>
+
+    <FontFamily x:Key="LatoLightItalic">pack://appliction;,,,/Fonts/#Lato Light Italic</FontFamily>
+    <FontFamily x:Key="LatoItalic">pack://appliction;,,,/Fonts/#Lato Italic</FontFamily>
+    <FontFamily x:Key="LatoMediumItalic">pack://appliction;,,,/Fonts/#Lato Medium Italic</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />
     </Style>
-    
+
     <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />
     </Style>
@@ -18,8 +27,12 @@
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
     </Style>
 
+    <Style TargetType="{x:Type Label}" x:Key="BaseTextLabelStyle">
+        <Setter Property="FontFamily" Value="{StaticResource LatoBlack}" />
+    </Style>
+
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}" />
-    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseTextLabelStyle}" />
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}" />
     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}" />
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}" />

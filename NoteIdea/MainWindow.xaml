@@ -9,19 +9,21 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         x:Name="AppWindow"
+        ResizeMode="CanMinimize"
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
-        ResizeMode="CanMinimize"
-        Title="NoteIdea" Height="600" Width="900">
-        
-            
+        BorderThickness="0"
+        Title="NoteIdea" Height="600" Width="1000">
+
+
+    <!-- Custom window design -->
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
                         <!-- Outer border with the dropshadow margin -->
-                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+                        <Border Padding="{Binding OuterMarginSizeThickness}">
 
                             <!-- Main window outline -->
                             <Grid>
@@ -29,13 +31,13 @@
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
                                         Background="{StaticResource DarkPurpleMenuBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+                                        CornerRadius="{Binding WindowCornerRadius}" />
 
                                 <!-- Window border and dropshadown -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                                <Border CornerRadius="{Binding WindowCornerRadius}">
 
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2" />
+                                        <DropShadowEffect ShadowDepth="10" Opacity="0.8" />
                                     </Border.Effect>
                                 </Border>
 
@@ -100,19 +102,18 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Window.Resources>
 
+    </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
             CaptionHeight="{Binding TitleHeight}"
             CornerRadius="0"
             GlassFrameThickness="0"
-              
-            
             />
     </WindowChrome.WindowChrome>
 
+    <!-- Main grid properties -->
     <Grid Background="{StaticResource LightGreyBackgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -120,47 +121,52 @@
             <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- Main menu -->
         <StackPanel Grid.Column="0" Background="{DynamicResource DarkPurpleMenuBrush }">
-
-            <StackPanel Margin="0 0 0 0" >
-                <Button  Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}" >
-                    <StackPanel HorizontalAlignment="Center" >
-                        <Image Width="40"  Source="Images/ButtonIcons/all.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="All notes"></TextBlock>
-                    </StackPanel>
-                </Button>
-                <Button Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}">
-                    <StackPanel HorizontalAlignment="Center">
-                        <Image Width="40" Source="Images/ButtonIcons/new.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Add new"></TextBlock>
-                    </StackPanel>
-                </Button>
-                <Button Opacity="0.3" Height="90" BorderThickness="0" Background="{DynamicResource DarkPurpleMenuBrush}">
-                    <StackPanel HorizontalAlignment="Center">
-                        <Image Width="40" Source="Images/ButtonIcons/archived.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Archived notes"></TextBlock>
-                    </StackPanel>
-                </Button>
-                <Button Opacity="0.3" Padding="10 0" Height="90" BorderThickness="0" Background="{x:Null}">
-                    <StackPanel HorizontalAlignment="Center">
-                        <Image Width="40" Source="Images/ButtonIcons/deleted.png"/>
-                        <TextBlock Margin="0 7 0 0" TextAlignment="Center" Foreground="White" Text="Deleted notes"></TextBlock>
-                    </StackPanel>
-                </Button>
-            </StackPanel>
+            <local:MainMenuControl/>
         </StackPanel>
-        <StackPanel Grid.Column="1" >
+
+        <!-- Short notes column -->
+        <StackPanel Grid.Column="1">
             <StackPanel.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="#221452" Offset="1"/>
+                    <GradientStop Color="#FF2C1B68" Offset="1"/>
                     <GradientStop Color="#44327e" Offset="0"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
+            <StackPanel.Effect>
+                <DropShadowEffect Color="#FF959595" Direction="0" ShadowDepth="3" RenderingBias="Quality" BlurRadius="9" Opacity="0.5"/>
+            </StackPanel.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
+                <!-- Searchbar -->
+
+                <local:SerachBarControl/>
+
+
+                <Label Grid.Row="1" Content="All your notes:" Foreground="{StaticResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
+
+                <!-- Short notes -->
+                <StackPanel  Grid.Row="2">
+                    <local:ShortNotesListConrol/>
+                </StackPanel>
+
+            </Grid>
         </StackPanel>
-        <StackPanel  Grid.Column="2">
 
-            <RichTextBox Padding="20" Margin="50 30" Height="500" BorderThickness="0"/>
+        <!-- Text editor -->
+        <StackPanel Grid.Column="2" Grid.Row="2">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Images/bgeditor.png" Opacity="0.2"/>
+            </StackPanel.Background>
+
+            <local:TextEditorControl />
+
         </StackPanel>
     </Grid>
 

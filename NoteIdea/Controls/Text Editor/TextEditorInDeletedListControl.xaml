@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="NoteIdea.TextEditorInDeletedListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NoteIdea"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel.Effect>
+                <DropShadowEffect Color="#FF959595" Direction="360" ShadowDepth="1" RenderingBias="Quality" BlurRadius="10" Opacity="0.3"/>
+            </StackPanel.Effect>
+
+            <!-- Date -->
+            <Border Style="{DynamicResource DateBorder}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Ellipse  Fill="{DynamicResource StatusGreenBrush}" Width="10" Height="10" HorizontalAlignment="Right" Margin="20,10,0,0" Panel.ZIndex="2"></Ellipse>
+
+                    <Button Grid.Column="1" Style="{DynamicResource TextEditorDeletedButton}">
+                        <Image  Source="/NoteIdea;component/Images/ButtonIcons/TextEditorIcons/undo.png" />
+                    </Button>
+                    
+
+                    <TextBlock Grid.Column="4" Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
+                    
+                </Grid>
+             
+            </Border>
+
+            <!-- Title -->
+            <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="Tytuł notatki która jest edytowana" />
+
+            <!-- Text box for note content -->
+            <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}"  />
+
+            <!-- Text editor toolbar -->
+            <Border Margin="50 0 50 0" Height="40"   Background="White" CornerRadius="0 0 10 10">
+  
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>
