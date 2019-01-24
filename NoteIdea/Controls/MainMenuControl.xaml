@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="100">
     <StackPanel Margin="0 0 0 0" >
-        <Button Style="{DynamicResource MainMenuButton}" >
+        <Button Style="{DynamicResource MainMenuButton}" Click="All_Click" >
             <StackPanel HorizontalAlignment="Center" >
                 <Image Width="40" Source="../Images/ButtonIcons/all.png"/>
                 <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="All notes"></TextBlock>
@@ -19,13 +19,13 @@
                 <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="Add new"></TextBlock>
             </StackPanel>
         </Button>
-        <Button Style="{DynamicResource MainMenuButton}">
+        <Button Style="{DynamicResource MainMenuButton}" Click="Archived_Click">
             <StackPanel HorizontalAlignment="Center">
                 <Image Width="40" Source="../Images/ButtonIcons/archived.png"/>
                 <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="Archived notes"></TextBlock>
             </StackPanel>
         </Button>
-        <Button Style="{DynamicResource MainMenuButton}">
+        <Button Style="{DynamicResource MainMenuButton}" Click="Deleted_Click">
             <StackPanel HorizontalAlignment="Center">
                 <Image Width="40" Source="../Images/ButtonIcons/deleted.png"/>
                 <TextBlock Style="{DynamicResource MainMenuSubtitle}" Text="Deleted notes"></TextBlock>

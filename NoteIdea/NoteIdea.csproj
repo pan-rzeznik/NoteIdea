@@ -91,8 +91,11 @@
     <Compile Include="Controls\Text Editor\TextEditorControl.xaml.cs">
       <DependentUpon>TextEditorControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AllNotes.cs" />
+    <Compile Include="ViewModel\ArchivedNotes.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
+    <Compile Include="ViewModel\DeletedNotes.cs" />
     <Compile Include="ViewModel\ShortNote\Design\ShortNoteListDesignModel.cs" />
     <Compile Include="ViewModel\ShortNote\Design\ShortNoteListItemDesignModel.cs" />
     <Compile Include="ViewModel\ShortNote\ShortNoteListItemViewModel.cs" />

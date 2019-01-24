@@ -8,7 +8,7 @@
              d:DesignHeight="420" d:DesignWidth="300">
     <Grid Height="440" DataContext="{x:Static local:ShortNoteListDesignModel.Instance}">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding AllNotes}">
+            <ItemsControl ItemsSource="{Binding Notes}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <local:ShortNoteListItemControl/>

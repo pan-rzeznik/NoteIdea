@@ -7,16 +7,6 @@ namespace NoteIdea
         /// <summary>
         /// List of all notes
         /// </summary>
-        public List<ShortNoteListItemViewModel> AllNotes { get; set; }
-
-        /// <summary>
-        /// List of all archived notes
-        /// </summary>
-        public List<ShortNoteListItemViewModel> ArchivedNotes { get; set; }
-
-        /// <summary>
-        /// List of deleted notes
-        /// </summary>
-        public List<ShortNoteListItemViewModel> DeletedNotes { get; set; }
+        public List<ShortNoteListItemViewModel> Notes { get; set; }
     }
 }

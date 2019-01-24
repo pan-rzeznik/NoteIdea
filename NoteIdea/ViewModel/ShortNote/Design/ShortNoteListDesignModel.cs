@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace NoteIdea
 {
     
-    public class ShortNoteListDesignModel : ShortNoteListViewModel
+    public class ShortNoteListDesignModel: ShortNoteListViewModel
     {
         /// <summary>
         /// Single instance of class. It's usig for designing procces. 
@@ -16,7 +16,7 @@ namespace NoteIdea
         /// </summary>
         public ShortNoteListDesignModel()
         { 
-            AllNotes = new List<ShortNoteListItemViewModel>
+            Notes = new List<ShortNoteListItemViewModel>
                 {
                     new ShortNoteListItemViewModel
                     {
