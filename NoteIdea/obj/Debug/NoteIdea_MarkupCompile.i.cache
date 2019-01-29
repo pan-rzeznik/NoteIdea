@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\
 NoteIdea
 none
 false
 DEBUG;TRACE
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\App.xaml
-16-1169331992
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\App.xaml
+17217028076
 
-241674705280
-15-752277578
-Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\EmptyListControl.xaml;Controls\Text Editor\TextEditorInDeletedListControl.xaml;Controls\Text Editor\TextEditorDisableControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Scrollbar.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
+26-1226352117
+15-928696971
+Controls\Main.xaml;Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\EmptyListControl.xaml;Controls\Text Editor\TextEditorInDeletedListControl.xaml;Controls\Text Editor\TextEditorDisableControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Scrollbar.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
 
-True
+False
 
