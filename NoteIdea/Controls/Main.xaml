@@ -70,13 +70,21 @@
                 <Label Grid.Row="1" Content="All your notes:" Foreground="{StaticResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
 
                 <!-- Short notes -->
-                <StackPanel  Grid.Row="2">
+                <StackPanel Name="Note_Buttons"  Grid.Row="2">
                     <Grid Height="440">
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
                             <ItemsControl ItemsSource="{Binding Notes}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
-                                        <local:ShortNoteListItemControl/>
+                                        <Border Style="{DynamicResource ShortNotes}" d:DataContext="{x:Static local:ShortNoteListItemDesignModel.Instance}">
+                                            <Button Style="{DynamicResource ShortNotesBtn}" Tag="{Binding Id}" Click="Note_Clicked" >
+                                                <StackPanel>
+                                                    <TextBlock TextTrimming="WordEllipsis" Text="{Binding Title}" FontFamily="{DynamicResource LatoHeavy }" FontSize="10" Foreground="White" Padding="10 10 5 0"/>
+                                                    <TextBlock MaxHeight="50" FontFamily="{DynamicResource LatoItalic}" FontSize="10" Foreground="White" TextWrapping="Wrap" TextTrimming="WordEllipsis" Padding="10 5 5 0" TextAlignment="Left" Text="{Binding Content}" />
+                                                    <Ellipse Fill="{DynamicResource StatusGreenBrush}" Width="7" Height="7" HorizontalAlignment="Right" Margin="0,5,10,10" Panel.ZIndex="2"></Ellipse>
+                                                </StackPanel>
+                                            </Button>
+                                        </Border>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
                             </ItemsControl>
@@ -112,29 +120,22 @@
 
                             <Ellipse  Fill="{DynamicResource StatusGreenBrush}" Width="10" Height="10" HorizontalAlignment="Right" Margin="20,10,0,0" Panel.ZIndex="2"></Ellipse>
 
-                            <Button Grid.Column="1" Style="{DynamicResource TextEditorDeletedButton}">
+                            <Button Grid.Column="1" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteDelete_Clicked">
                                 <Image  Source="../Images/ButtonIcons/TextEditorIcons/delete.png" />
                             </Button>
-                            <Button Grid.Column="2" Style="{DynamicResource TextEditorDeletedButton}">
+                            <Button Grid.Column="2" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteArchive_Clicked">
                                 <Image  Source="/NoteIdea;component/Images/ButtonIcons/TextEditorIcons/inbox.png" />
                             </Button>
-
-                            <ComboBox  Grid.Column="3" Height="20" BorderThickness="0" Background="Transparent" Text="Status" Margin="20 10 10 0" HorizontalAlignment="Right">
-                                <ComboBoxItem Focusable="True">Importnat</ComboBoxItem>
-                                <ComboBoxItem>Normal</ComboBoxItem>
-                                <ComboBoxItem>Unimportnat</ComboBoxItem>
-                            </ComboBox>
-                            <TextBlock Grid.Column="4" Text="2019.01.02" Style="{DynamicResource Date}" Panel.ZIndex="2"></TextBlock>
 
                         </Grid>
 
                     </Border>
 
                     <!-- Title -->
-                    <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="{Binding Path=CurrentTitle, UpdateSourceTrigger=Explicit}" />
+                    <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="{Binding Path=CurrentTitle, UpdateSourceTrigger=Explicit}" TextChanged="CurrentTitle_TextChanged" />
 
                     <!-- Text box for note content -->
-                    <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}"  />
+                    <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}" />
 
                     <!-- Text editor toolbar -->
                     <Border Margin="50 0 50 0" Height="40"   Background="White" CornerRadius="0 0 10 10">

@@ -2,7 +2,12 @@
 namespace NoteIdea
 {
    public class ShortNoteListItemViewModel : BaseViewModel
-    { 
+    {
+        /// <summary>
+        /// Title of the note
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Title of the note
         /// </summary>

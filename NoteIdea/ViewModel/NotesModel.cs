@@ -87,7 +87,7 @@ namespace NoteIdea
                 {
                     if (Notes.Count > 0)
                     {
-                        return Notes[0].Title;
+                        return Notes[CurrentNoteId].Title;
                     } else
                     {
                         return "Dupa";
@@ -102,6 +102,48 @@ namespace NoteIdea
                 _currentTitle = value;
                 OnPropertyChanged("CurrentTitle");
             }
+        }
+
+
+        public void SetNotesId()
+        {
+            for (int i = 0; i < Notes.Count; i++)
+            {
+                Notes[i].Id = i;
+            }
+        }
+
+        public int _currentNoteId;
+
+        public int CurrentNoteId
+        {
+            get
+            {
+                return _currentNoteId;
+            }
+            set
+            {
+                _currentNoteId = value;
+                OnPropertyChanged("CurrentNoteId");
+            }
+        }
+
+        public void ToArchived()
+        {
+            ShortNoteListItemViewModel toArchived = Notes[CurrentNoteId];
+            _archiweddNotes.Add(toArchived);
+            Notes.RemoveAt(CurrentNoteId);
+            CurrentNoteId = 0;
+            CurrentTitle = "";
+        }
+
+        public void ToDeleted()
+        {
+            ShortNoteListItemViewModel toDeleted = Notes[CurrentNoteId];
+            _deletedNotes.Add(toDeleted);
+            Notes.RemoveAt(CurrentNoteId);
+            CurrentNoteId = 0;
+            CurrentTitle = "";
         }
     }
 }
