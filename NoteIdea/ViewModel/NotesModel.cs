@@ -145,5 +145,19 @@ namespace NoteIdea
             CurrentNoteId = 0;
             CurrentTitle = "";
         }
+
+        public void AddNew()
+        {
+            ShortNoteListItemViewModel newNote = new ShortNoteListItemViewModel
+            {
+                Title = "New Note",
+                Content = "",
+                Status = "#00b348"
+            };
+
+            Notes.Add(newNote);
+            SetNotesId();
+            CurrentNoteId = Notes.Count - 1;
+        }
     }
 }

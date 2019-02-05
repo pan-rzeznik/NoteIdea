@@ -20,14 +20,18 @@ namespace NoteIdea
 
         private void AddNew_Clicked(object sender, RoutedEventArgs e)
         {
-            NotesList.Visibility = Visibility.Hidden;
+            Archive.Visibility = Visibility.Visible;
+            Delete.Visibility = Visibility.Visible;
+
+            _notes.CurrentNoteId = 0;
+            _notes.ChangeCurrentNotes("allNotes");
+            _notes.AddNew();
         }
 
         private void AllNotes_Clicked(object sender, RoutedEventArgs e)
         {
             Archive.Visibility = Visibility.Visible;
             Delete.Visibility = Visibility.Visible;
-            NotesList.Visibility = Visibility.Visible;
 
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("allNotes");
@@ -37,7 +41,6 @@ namespace NoteIdea
         {
             Archive.Visibility = Visibility.Visible;
             Delete.Visibility = Visibility.Hidden;
-            NotesList.Visibility = Visibility.Visible;
 
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("deletedNotes");
@@ -47,7 +50,6 @@ namespace NoteIdea
         {
             Delete.Visibility = Visibility.Visible;
             Archive.Visibility = Visibility.Hidden;
-            NotesList.Visibility = Visibility.Visible;
 
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("archiwedNotes");
@@ -69,7 +71,9 @@ namespace NoteIdea
             {
                 string title = textBox.Text;
 
-                if (_notes.CurrentNoteId > 0)
+                Console.WriteLine(_notes.CurrentNoteId);
+
+                if (_notes.CurrentNoteId >= 0)
                 {
                     _notes.Notes[_notes.CurrentNoteId].Title = title;
                 }
