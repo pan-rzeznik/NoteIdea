@@ -62,11 +62,6 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- Searchbar -->
-
-                <local:SerachBarControl/>
-
-
                 <Label Grid.Row="1" Content="All your notes:" Foreground="{StaticResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
 
                 <!-- Short notes -->
@@ -120,10 +115,14 @@
 
                             <Ellipse  Fill="{DynamicResource StatusGreenBrush}" Width="10" Height="10" HorizontalAlignment="Right" Margin="20,10,0,0" Panel.ZIndex="2"></Ellipse>
 
-                            <Button Name="Delete" Grid.Column="1" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteDelete_Clicked">
+                            <Button Name="Restore" Grid.Column="1" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteRestore_Clicked">
+                                <Image  Source="/NoteIdea;component/Images/ButtonIcons/TextEditorIcons/undo.png" />
+                            </Button>
+                            
+                            <Button Name="Delete" Grid.Column="2" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteDelete_Clicked">
                                 <Image  Source="../Images/ButtonIcons/TextEditorIcons/delete.png" />
                             </Button>
-                            <Button Name="Archive" Grid.Column="2" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteArchive_Clicked">
+                            <Button Name="Archive" Grid.Column="3" Style="{DynamicResource TextEditorDeletedButton}" Click="NoteArchive_Clicked">
                                 <Image  Source="/NoteIdea;component/Images/ButtonIcons/TextEditorIcons/inbox.png" />
                             </Button>
 

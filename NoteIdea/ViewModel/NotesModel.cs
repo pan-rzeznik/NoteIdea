@@ -146,6 +146,15 @@ namespace NoteIdea
             CurrentTitle = "";
         }
 
+        public void ToAll()
+        {
+            ShortNoteListItemViewModel toAll = Notes[CurrentNoteId];
+            _allNotes.Add(toAll);
+            Notes.RemoveAt(CurrentNoteId);
+            CurrentNoteId = 0;
+            CurrentTitle = "";
+        }
+
         public void AddNew()
         {
             ShortNoteListItemViewModel newNote = new ShortNoteListItemViewModel
