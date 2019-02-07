@@ -134,7 +134,7 @@
                     <TextBox Style="{DynamicResource NoteTitle}"  Panel.ZIndex="1" Text="{Binding Path=CurrentTitle, UpdateSourceTrigger=Explicit}" TextChanged="CurrentTitle_TextChanged" />
 
                     <!-- Text box for note content -->
-                    <RichTextBox x:Name="rTextBox" Style="{DynamicResource TextEditor}" />
+                    <RichTextBox Name="NoteContent" Style="{DynamicResource TextEditor}"  TextChanged="CurrentContent_TextChanged" />
 
                     <!-- Text editor toolbar -->
                     <Border Margin="50 0 50 0" Height="40"   Background="White" CornerRadius="0 0 10 10">

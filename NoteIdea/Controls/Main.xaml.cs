@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Xml;
 
 namespace NoteIdea
 {
@@ -21,6 +23,9 @@ namespace NoteIdea
             Restore.Visibility = Visibility.Hidden;
             Archive.SetValue(Grid.ColumnProperty, 1);
             Delete.SetValue(Grid.ColumnProperty, 2);
+
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            textRange.Text = _notes.Notes[0].Content;
         }
 
         private void AddNew_Clicked(object sender, RoutedEventArgs e)
@@ -34,6 +39,9 @@ namespace NoteIdea
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("allNotes");
             _notes.AddNew();
+
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
         private void AllNotes_Clicked(object sender, RoutedEventArgs e)
@@ -46,6 +54,9 @@ namespace NoteIdea
 
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("allNotes");
+
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
         
         private void DeletedNotes_Clicked(object sender, RoutedEventArgs e)
@@ -58,6 +69,9 @@ namespace NoteIdea
 
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("deletedNotes");
+
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
         private void ArchivedNotes_Clicked(object sender, RoutedEventArgs e)
@@ -70,6 +84,9 @@ namespace NoteIdea
 
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("archiwedNotes");
+
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
         private void Note_Clicked(object sender, RoutedEventArgs e)
@@ -78,6 +95,8 @@ namespace NoteIdea
             var button = (Button)sender;
             int id = Convert.ToInt32(button.Tag);
             _notes.CurrentNoteId = id;
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
         private void CurrentTitle_TextChanged(object sender, TextChangedEventArgs e)
@@ -88,13 +107,17 @@ namespace NoteIdea
             {
                 string title = textBox.Text;
 
-                Console.WriteLine(_notes.CurrentNoteId);
-
                 if (_notes.CurrentNoteId >= 0 && _notes.Notes.Count > 0)
                 {
                     _notes.Notes[_notes.CurrentNoteId].Title = title;
                 }
             }
+        }
+
+        private void CurrentContent_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+            _notes.Notes[_notes.CurrentNoteId].Content = textRange.Text;
         }
 
         private void NoteArchive_Clicked(object sender, RoutedEventArgs e)
