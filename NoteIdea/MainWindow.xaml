@@ -113,61 +113,6 @@
             />
     </WindowChrome.WindowChrome>
 
-    <!-- Main grid properties -->
-    <Grid Background="{StaticResource LightGreyBackgroundBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="6*"/>
-        </Grid.ColumnDefinitions>
-
-        <!-- Main menu -->
-        <StackPanel Grid.Column="0" Background="{DynamicResource DarkPurpleMenuBrush }">
-            <local:MainMenuControl/>
-        </StackPanel>
-
-        <!-- Short notes column -->
-        <StackPanel Grid.Column="1">
-            <StackPanel.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="#FF2C1B68" Offset="1"/>
-                    <GradientStop Color="#44327e" Offset="0"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-            <StackPanel.Effect>
-                <DropShadowEffect Color="#FF959595" Direction="0" ShadowDepth="3" RenderingBias="Quality" BlurRadius="9" Opacity="0.5"/>
-            </StackPanel.Effect>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <!-- Searchbar -->
-
-                <local:SerachBarControl/>
-
-
-                <Label Grid.Row="1" Content="All your notes:" Foreground="{StaticResource BasicWhiteTextColorBrush}" Margin="20 0 0 0"/>
-
-                <!-- Short notes -->
-                <StackPanel  Grid.Row="2">
-                    <local:ShortNotesListConrol/>
-                </StackPanel>
-
-            </Grid>
-        </StackPanel>
-
-        <!-- Text editor -->
-        <StackPanel Grid.Column="2" Grid.Row="2">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Images/bgeditor.png" Opacity="0.2"/>
-            </StackPanel.Background>
-
-            <local:TextEditorControl />
-
-        </StackPanel>
-    </Grid>
+    <local:Main/>
 
 </Window>

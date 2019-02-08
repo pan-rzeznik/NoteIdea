@@ -9,7 +9,7 @@
     <Color x:Key="SelectedNote">#44327e</Color>
     <SolidColorBrush x:Key="SelectedNoteBrush" Color="{StaticResource SelectedNote}"/>
 
-    <Color x:Key="NotSelectedNote">#261757</Color>
+    <Color x:Key="NotSelectedNote">#2B1A5E</Color>
     <SolidColorBrush x:Key="NotSelectedNoteBrush" Color="{StaticResource NotSelectedNote}"/>
 
     <!-- Status colors -->

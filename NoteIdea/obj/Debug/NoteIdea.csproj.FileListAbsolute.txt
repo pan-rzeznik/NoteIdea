@@ -40,4 +40,51 @@ C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEdit
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorDisableControl.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.exe.config
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.exe
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\bin\Debug\NoteIdea.pdb
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csprojAssemblyReference.cache
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Main.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\MainMenuControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\SerachBarControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListItemControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\EmptyListControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorDisableControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorControl.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\MainWindow.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\App.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea_MarkupCompile.cache
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea_MarkupCompile.lref
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\App.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\MainMenuControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\SerachBarControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListItemControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\ShortNotes\ShortNoteListControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\EmptyListControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorInDeletedListControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorDisableControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Text Editor\TextEditorControl.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\MainWindow.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Buttons.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Colors.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Fonts.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\RichTextBox.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Scrollbar.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Texts.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Styles\Windows.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Main.baml
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.g.resources
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.Properties.Resources.resources
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.GenerateResource.cache
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CoreCompileInputs.cache
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csproj.CopyComplete
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.exe
+C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.pdb
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Main.g.cs
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Main.baml
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csprojAssemblyReference.cache
