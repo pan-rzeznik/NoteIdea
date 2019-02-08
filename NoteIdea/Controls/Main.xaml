@@ -145,43 +145,43 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Stretch">
 
-                                <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" Padding="10 0 0 0" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Undo" Padding="10 0 0 0" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/undo.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Redo" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="ApplicationCommands.Redo" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/redo.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBold" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBold" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/bold.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleItalic" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleItalic" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/italic.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleUnderline" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleUnderline" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/underline.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.DecreaseFontSize" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.DecreaseFontSize" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/font.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.IncreaseFontSize" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.IncreaseFontSize" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/font+.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBullets" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleBullets" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/list.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleNumbering" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.ToggleNumbering" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/list-1.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignLeft" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignLeft" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/left-alignment.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignCenter" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignCenter" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/center-alignment.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignRight" CommandTarget="{Binding ElementName=rTextBox}" >
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignRight" CommandTarget="{Binding ElementName=NoteContent}" >
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/right-alignment.png"/>
                                 </Button>
-                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignJustify" CommandTarget="{Binding ElementName=rTextBox}">
+                                <Button Style="{DynamicResource TextEditorButton}" Command="EditingCommands.AlignJustify" CommandTarget="{Binding ElementName=NoteContent}">
                                     <Image Source="../Images/ButtonIcons/TextEditorIcons/justify-align.png" />
                                 </Button>
                             </StackPanel>
