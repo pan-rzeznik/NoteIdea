@@ -7,12 +7,12 @@ using System.Xml;
 namespace NoteIdea
 {
     /// <summary>
-    /// Interaction logic for Main.xaml
+    /// Main control
     /// </summary>
     public partial class Main : UserControl
     {
         NotesModel _notes = new NotesModel();
-
+        
         public Main()
         {
             InitializeComponent();
@@ -28,6 +28,11 @@ namespace NoteIdea
             textRange.Text = _notes.Notes[0].Content;
         }
 
+        /// <summary>
+        /// Add new note
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddNew_Clicked(object sender, RoutedEventArgs e)
         {
             Archive.Visibility = Visibility.Visible;
@@ -43,7 +48,12 @@ namespace NoteIdea
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
             textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
-
+        
+        /// <summary>
+        /// All notes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AllNotes_Clicked(object sender, RoutedEventArgs e)
         {
             Archive.Visibility = Visibility.Visible;
@@ -59,6 +69,11 @@ namespace NoteIdea
             textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
         
+        /// <summary>
+        /// Deleted notes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeletedNotes_Clicked(object sender, RoutedEventArgs e)
         {
             Archive.Visibility = Visibility.Visible;
@@ -74,6 +89,11 @@ namespace NoteIdea
             textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
+        /// <summary>
+        /// Archived notes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ArchivedNotes_Clicked(object sender, RoutedEventArgs e)
         {
             Delete.Visibility = Visibility.Visible;
@@ -89,6 +109,11 @@ namespace NoteIdea
             textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
+        /// <summary>
+        /// View note
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Note_Clicked(object sender, RoutedEventArgs e)
         {
             _notes.SetNotesId();
@@ -99,6 +124,11 @@ namespace NoteIdea
             textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
         }
 
+        /// <summary>
+        /// Change title
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CurrentTitle_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
@@ -114,12 +144,22 @@ namespace NoteIdea
             }
         }
 
+        /// <summary>
+        /// Change content
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CurrentContent_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
             _notes.Notes[_notes.CurrentNoteId].Content = textRange.Text;
         }
 
+        /// <summary>
+        /// Add note to archived
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NoteArchive_Clicked(object sender, RoutedEventArgs e)
         {
             if (_notes.Notes.Count > 0)
@@ -128,6 +168,11 @@ namespace NoteIdea
             }
         }
 
+        /// <summary>
+        /// Add note to deleted
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NoteDelete_Clicked(object sender, RoutedEventArgs e)
         {
             if (_notes.Notes.Count > 0)
@@ -136,6 +181,11 @@ namespace NoteIdea
             }
         }
 
+        /// <summary>
+        /// Add note to all
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NoteRestore_Clicked(object sender, RoutedEventArgs e)
         {
             if (_notes.Notes.Count > 0)

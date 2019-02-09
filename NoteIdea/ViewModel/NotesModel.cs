@@ -3,6 +3,9 @@ using System.Collections.ObjectModel;
 
 namespace NoteIdea
 {
+    /// <summary>
+    /// Notes Model
+    /// </summary>
     class NotesModel: BaseViewModel
     {
         private ObservableCollection<ShortNoteListItemViewModel> _notes;
@@ -61,6 +64,10 @@ namespace NoteIdea
             }
         }
 
+        /// <summary>
+        /// Change current notes
+        /// </summary>
+        /// <param name="notesName"></param>
         public void ChangeCurrentNotes(string notesName)
         {
             switch(notesName)
@@ -104,7 +111,9 @@ namespace NoteIdea
             }
         }
 
-
+        /// <summary>
+        /// Set notes ids
+        /// </summary>
         public void SetNotesId()
         {
             for (int i = 0; i < Notes.Count; i++)
@@ -128,6 +137,9 @@ namespace NoteIdea
             }
         }
 
+        /// <summary>
+        /// Add note to archived
+        /// </summary>
         public void ToArchived()
         {
             ShortNoteListItemViewModel toArchived = Notes[CurrentNoteId];
@@ -137,6 +149,9 @@ namespace NoteIdea
             CurrentTitle = "";
         }
 
+        /// <summary>
+        /// Add note to deleted
+        /// </summary>
         public void ToDeleted()
         {
             ShortNoteListItemViewModel toDeleted = Notes[CurrentNoteId];
@@ -146,6 +161,9 @@ namespace NoteIdea
             CurrentTitle = "";
         }
 
+        /// <summary>
+        /// Add note to all
+        /// </summary>
         public void ToAll()
         {
             ShortNoteListItemViewModel toAll = Notes[CurrentNoteId];
@@ -155,12 +173,15 @@ namespace NoteIdea
             CurrentTitle = "";
         }
 
+        /// <summary>
+        /// Add new note
+        /// </summary>
         public void AddNew()
         {
             ShortNoteListItemViewModel newNote = new ShortNoteListItemViewModel
             {
                 Title = "New Note",
-                Content = "",
+                Content = "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
                 Status = "#00b348"
             };
 
