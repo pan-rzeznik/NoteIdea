@@ -18,3 +18,5 @@ C:\Users\norbert\Desktop\NoteIdea\UnitTestProject1\obj\Debug\UnitTestProject1.cs
 C:\Users\norbert\Desktop\NoteIdea\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete
 C:\Users\norbert\Desktop\NoteIdea\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\norbert\Desktop\NoteIdea\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Nauka\Desktop\NoteIdea\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
+C:\Users\Nauka\Desktop\NoteIdea\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
