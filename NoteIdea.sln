@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteIdea", "NoteIdea\NoteIdea.csproj", "{6E8D816F-3F2F-4FA6-AB30-CEEE327288F7}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_NoteIdea", "Setup_NoteIdea\Setup_NoteIdea.vdproj", "{44955EDA-53A9-4021-BAD5-C440950F2393}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{FB4DB2BE-BFA4-4C13-A240-277AC4107FD0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NoteIdea_Setup", "NoteIdea_Setup\NoteIdea_Setup.vdproj", "{D7F39C7B-B73D-45C0-9801-00DD624FD4D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +19,12 @@ Global
 		{6E8D816F-3F2F-4FA6-AB30-CEEE327288F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E8D816F-3F2F-4FA6-AB30-CEEE327288F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E8D816F-3F2F-4FA6-AB30-CEEE327288F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44955EDA-53A9-4021-BAD5-C440950F2393}.Debug|Any CPU.ActiveCfg = Debug
-		{44955EDA-53A9-4021-BAD5-C440950F2393}.Release|Any CPU.ActiveCfg = Release
 		{FB4DB2BE-BFA4-4C13-A240-277AC4107FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB4DB2BE-BFA4-4C13-A240-277AC4107FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB4DB2BE-BFA4-4C13-A240-277AC4107FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB4DB2BE-BFA4-4C13-A240-277AC4107FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F39C7B-B73D-45C0-9801-00DD624FD4D7}.Debug|Any CPU.ActiveCfg = Debug
+		{D7F39C7B-B73D-45C0-9801-00DD624FD4D7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

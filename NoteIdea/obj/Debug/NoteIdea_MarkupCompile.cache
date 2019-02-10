@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\
 NoteIdea
 none
 false
 DEBUG;TRACE
-C:\Users\norbert\Desktop\NoteIdea\NoteIdea\App.xaml
+C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\App.xaml
 17217028076
 
 221640514481
-15-928696971
+16-1887230901
 Controls\Main.xaml;Controls\MainMenuControl.xaml;Controls\SerachBarControl.xaml;Controls\ShortNotes\ShortNoteListItemControl.xaml;Controls\ShortNotes\ShortNoteListControl.xaml;Controls\EmptyListControl.xaml;Controls\Text Editor\TextEditorInDeletedListControl.xaml;Controls\Text Editor\TextEditorDisableControl.xaml;Controls\Text Editor\TextEditorControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\RichTextBox.xaml;Styles\Scrollbar.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
 
 False

@@ -87,4 +87,3 @@ C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.exe
 C:\Users\norbert\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.pdb
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Main.g.cs
 C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\Controls\Main.baml
-C:\Users\Nauka\Desktop\NoteIdea\NoteIdea\obj\Debug\NoteIdea.csprojAssemblyReference.cache
