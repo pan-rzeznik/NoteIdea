@@ -5,12 +5,12 @@ using NoteIdea;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class NotesModel
     {
         [TestMethod]
         public void AddNew()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
             int prevCount = notesModel.Notes.Count;
             notesModel.AddNew();
 
@@ -20,7 +20,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ChangeCurrentNotes_Deleted()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
             notesModel.ChangeCurrentNotes("deletedNotes");
 
             Assert.AreEqual(1, notesModel.Notes.Count);
@@ -30,7 +30,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ChangeCurrentNotes_All()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
             notesModel.ChangeCurrentNotes("alldNotes");
 
             Assert.AreEqual(1, notesModel.Notes.Count);
@@ -40,7 +40,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ChangeCurrentNotes_Archived()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
             notesModel.ChangeCurrentNotes("archiwedNotes");
 
             Assert.AreEqual(1, notesModel.Notes.Count);
@@ -50,7 +50,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void SetNotesId()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
             notesModel.SetNotesId();
 
             Assert.AreEqual(0, notesModel.Notes[0].Id);
@@ -59,7 +59,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void SetNotesId_1()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
             notesModel.AddNew();
             notesModel.SetNotesId();
 
@@ -69,7 +69,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ToArchived()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
 
             notesModel.ToArchived();
             notesModel.ChangeCurrentNotes("archiwedNotes");
@@ -80,7 +80,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ToArchived_Title()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
 
             string title = notesModel.Notes[0].Title;
             notesModel.ToArchived();
@@ -92,7 +92,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ToDeleted()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
 
             notesModel.ToDeleted();
             notesModel.ChangeCurrentNotes("deletedNotes");
@@ -103,7 +103,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ToADeleted_Title()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
 
             string title = notesModel.Notes[0].Title;
             notesModel.ToDeleted();
@@ -115,7 +115,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ToAll()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
 
             notesModel.ChangeCurrentNotes("deletedNotes");
             notesModel.ToAll();
@@ -127,7 +127,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void ToAll_Title()
         {
-            NotesModel notesModel = new NotesModel();
+            NoteIdea.NotesModel notesModel = new NoteIdea.NotesModel();
 
             notesModel.ChangeCurrentNotes("deletedNotes");
             string title = notesModel.Notes[0].Title;
