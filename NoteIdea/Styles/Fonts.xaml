@@ -8,12 +8,12 @@
     <FontFamily x:Key="LatoLight">pack://appliction;,,,/Fonts/#Lato Light</FontFamily>
     <FontFamily x:Key="LatoBlack">pack://appliction;,,,/Fonts/#Lato Black</FontFamily>
     <FontFamily x:Key="LatoHeavy">pack://appliction;,,,/Fonts/#Lato Heavy</FontFamily>
-    <FontFamily x:Key="LatoSemiBold">pack://appliction;,,,/Fonts/#Lato SemiBold</FontFamily>
+    
     <FontFamily x:Key="LatoMedium">pack://appliction;,,,/Fonts/#Lato Medium</FontFamily>
 
     <FontFamily x:Key="LatoLightItalic">pack://appliction;,,,/Fonts/#Lato Light Italic</FontFamily>
     <FontFamily x:Key="LatoItalic">pack://appliction;,,,/Fonts/#Lato Italic</FontFamily>
-    <FontFamily x:Key="LatoMediumItalic">pack://appliction;,,,/Fonts/#Lato Medium Italic</FontFamily>
+    
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />
