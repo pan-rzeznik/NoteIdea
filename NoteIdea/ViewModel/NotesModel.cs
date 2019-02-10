@@ -3,21 +3,12 @@ using System.Collections.ObjectModel;
 
 namespace NoteIdea
 {
-    /// <summary>
-    /// Notes Model
-    /// </summary>
-    class NotesModel: BaseViewModel
+    public class NotesModel: BaseViewModel
     {
         private ObservableCollection<ShortNoteListItemViewModel> _notes;
 
         private ObservableCollection<ShortNoteListItemViewModel> _allNotes = new ObservableCollection<ShortNoteListItemViewModel>
         {
-            new ShortNoteListItemViewModel
-                {
-                    Title = "all",
-                    Content = "Po powrocie na ziemie polskie został królem. Miał dwóch synów (Kraka II, Lecha II) i jedną córkę. Jego synowie mieli zabić groźnego Smoka Wawelskiego, a jeden z nich przez zawiść zabił brata[1]. Inna legenda podaje, że sam Krak był pogromcą smoka[2]. Córka stała się bohaterką legendy „O Wandzie, która nie chciała Niemca",
-                    Status = "#00b348"
-                 },
             new ShortNoteListItemViewModel
                 {
                     Title = "all",
@@ -95,9 +86,6 @@ namespace NoteIdea
                     if (Notes.Count > 0)
                     {
                         return Notes[CurrentNoteId].Title;
-                    } else
-                    {
-                        return "Dupa";
                     }
                 }
 

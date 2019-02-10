@@ -25,7 +25,7 @@ namespace NoteIdea
             Delete.SetValue(Grid.ColumnProperty, 2);
 
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            textRange.Text = _notes.Notes[0].Content;
+            textRange.Text = _notes.Notes.Count > 0 ? _notes.Notes[_notes.CurrentNoteId].Content : "";
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace NoteIdea
             _notes.AddNew();
 
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
+            textRange.Text = _notes.Notes.Count > 0 ? _notes.Notes[_notes.CurrentNoteId].Content : "";
         }
         
         /// <summary>
@@ -66,7 +66,7 @@ namespace NoteIdea
             _notes.ChangeCurrentNotes("allNotes");
 
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
+            textRange.Text = _notes.Notes.Count > 0 ? _notes.Notes[_notes.CurrentNoteId].Content : "";
         }
         
         /// <summary>
@@ -85,8 +85,9 @@ namespace NoteIdea
             _notes.CurrentNoteId = 0;
             _notes.ChangeCurrentNotes("deletedNotes");
 
-            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
+
+           TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+           textRange.Text = _notes.Notes.Count > 0 ? _notes.Notes[_notes.CurrentNoteId].Content : "";
         }
 
         /// <summary>
@@ -106,7 +107,7 @@ namespace NoteIdea
             _notes.ChangeCurrentNotes("archiwedNotes");
 
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
+            textRange.Text = _notes.Notes.Count > 0 ? _notes.Notes[_notes.CurrentNoteId].Content : "";
         }
 
         /// <summary>
@@ -121,7 +122,7 @@ namespace NoteIdea
             int id = Convert.ToInt32(button.Tag);
             _notes.CurrentNoteId = id;
             TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            textRange.Text = _notes.Notes[_notes.CurrentNoteId].Content;
+            textRange.Text = _notes.Notes.Count > 0 ? _notes.Notes[_notes.CurrentNoteId].Content : "";
         }
 
         /// <summary>
@@ -151,8 +152,11 @@ namespace NoteIdea
         /// <param name="e"></param>
         private void CurrentContent_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
-            _notes.Notes[_notes.CurrentNoteId].Content = textRange.Text;
+            if (_notes.Notes.Count > 0)
+            {
+                TextRange textRange = new TextRange(NoteContent.Document.ContentStart, NoteContent.Document.ContentEnd);
+                _notes.Notes[_notes.CurrentNoteId].Content = textRange.Text;
+            }
         }
 
         /// <summary>
