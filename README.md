@@ -7,4 +7,9 @@ The main goal of the project was to develop applications based on WPF and cooper
 
 NoteIdea application is used to save short notes, give them the status of validity and has a built-in text editor to edit the text of notes entered.
 
-### [Documentation](https://norbert-wsei.github.io) - API, Project Description
+### How to install?
+
+Go to *NoteIdea_Setup/Debug/* **NoteIdea_Setup.msi** and run
+
+### Projekt documentation
+[Documentation](https://norbert-wsei.github.io) - API, Project Description
